@@ -1,29 +1,39 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const TopNavigationbar = (): ReactElement => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand navbar-light bg-light fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           <div className="brand-logo" />
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler d-block"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          aria-expanded={!isNavCollapsed ? true : false}
           aria-label="Toggle navigation"
+          onClick={handleNavCollapse}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span
+            className={isNavCollapsed ? "navbar-toggler-icon" : "close"}
+          ></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          className={`${isNavCollapsed ? "collapse" : ""} navbar-collapse`}
+          id="navbarSupportedContent"
+        >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink className="nav-item nav-link" smooth to="/">
-                Home <span className="sr-only">(current)</span>
+                Home
               </NavLink>
             </li>
             <li className="nav-item">

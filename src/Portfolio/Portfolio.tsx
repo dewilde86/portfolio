@@ -21,7 +21,19 @@ export const Portfolio = (): ReactElement => {
             </div>
           </div>
           <div className="row">
-            <CardWrapper maxRowCount={21}>
+            <CardWrapper maxRowCount={17}>
+              <Card
+                imageSrc="Superfuif"
+                imageAlt="Superfuif Website"
+                link="Superfuif"
+                customerName="Superfuif"
+              />
+              <Card
+                imageSrc="Flexalarm"
+                imageAlt="Flexalarm Website"
+                link="Flexalarm"
+                customerName="FlexAlarm"
+              />
               <Card
                 imageSrc="Supergroup"
                 imageAlt="Supergroup Website"
@@ -75,12 +87,6 @@ export const Portfolio = (): ReactElement => {
                 imageAlt="Ora Coaching Website"
                 link="Oracoaching"
                 customerName="Ora coaching"
-              />
-              <Card
-                imageSrc="Superfuif"
-                imageAlt="Superfuif Website"
-                link="Superfuif"
-                customerName="Superfuif"
               />
               <Card
                 imageSrc="Intersoftware-website"

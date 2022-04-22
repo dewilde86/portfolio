@@ -25,7 +25,7 @@ export const OraCoaching = (): ReactElement => {
           Description={getPortfolioTextResources("OraCoachingDescription")}
           Solution={getPortfolioTextResources("OraCoachingSolution")}
           PrevProject="StrongerBodyStrongerMind"
-          NextProject="Superfuif"
+          NextProject="Intersoftware-website"
         />
       </main>
       <Footer />

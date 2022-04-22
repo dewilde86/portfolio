@@ -24,7 +24,7 @@ export const Montblanc = (): ReactElement => {
           Description={getPortfolioTextResources("MontblancDescription")}
           Solution={getPortfolioTextResources("MontblancSolution")}
           PrevProject="OudebegraafplaatsGouda"
-          NextProject="Supergroup"
+          NextProject="Superfuif"
         />
       </main>
       <Footer />

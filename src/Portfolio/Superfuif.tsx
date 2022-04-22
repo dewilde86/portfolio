@@ -24,8 +24,8 @@ export const Superfuif = (): ReactElement => {
           Url={getPortfolioTextResources("SuperfuifUrl")}
           Description={getPortfolioTextResources("SuperfuifDescription")}
           Solution={getPortfolioTextResources("SuperfuifSolution")}
-          PrevProject="OraCoaching"
-          NextProject="Intersoftware-website"
+          PrevProject="Montblanc"
+          NextProject="Flexalarm"
         />
       </main>
       <Footer />

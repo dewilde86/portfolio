@@ -87,11 +87,11 @@ export const Aboutme = (): ReactElement => {
               ratio={60}
               name="jQuery"
             />
-            <SkillItem skill="React" className="p60" ratio={60} name="React" />
+            <SkillItem skill="React" className="p70" ratio={70} name="React" />
             <SkillItem
               skill="Git-versiebeheer"
-              className="p60"
-              ratio={60}
+              className="p70"
+              ratio={70}
               name="Git"
             />
           </div>

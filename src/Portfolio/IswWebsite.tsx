@@ -24,7 +24,7 @@ export const IswWebsite = (): ReactElement => {
           Url={getPortfolioTextResources("IswUrl")}
           Description={getPortfolioTextResources("IswDescription")}
           Solution={getPortfolioTextResources("IswSolution")}
-          PrevProject="Superfuif"
+          PrevProject="OraCoaching"
           NextProject="Intersoftware-rekentools"
         />
       </main>

@@ -67,6 +67,18 @@ const Home = (): ReactElement => {
               <div className="row">
                 <CardWrapper maxRowCount={10}>
                   <Card
+                    imageSrc="Superfuif"
+                    imageAlt="Superfuif Website"
+                    link="Superfuif"
+                    customerName="Superfuif"
+                  />
+                  <Card
+                    imageSrc="Flexalarm"
+                    imageAlt="Flexalarm Website"
+                    link="Flexalarm"
+                    customerName="FlexAlarm"
+                  />
+                  <Card
                     imageSrc="Supergroup"
                     imageAlt="Supergroup Website"
                     link="Supergroup"
@@ -101,18 +113,6 @@ const Home = (): ReactElement => {
                     imageAlt="Supertech Website"
                     link="Supertech"
                     customerName="Supertech"
-                  />
-                  <Card
-                    imageSrc="Validat"
-                    imageAlt="Validat Website"
-                    link="Validat"
-                    customerName="Validat"
-                  />
-                  <Card
-                    imageSrc="StrongerBodyStrongerMind"
-                    imageAlt="Stronger Body Stronger Mind Website"
-                    link="StrongerBodyStrongerMind"
-                    customerName="Stronger Body Stronger Mind"
                   />
                 </CardWrapper>
                 <div className="button-wrapper justify-content-end">

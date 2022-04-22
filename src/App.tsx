@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AlgemeneVoorwaarden } from "./AlgemeneVoorwaarden/AlgemeneVoorwaarden";
 import { Armalux } from "./Portfolio/Armalux";
 import { DJSchoolGouda } from "./Portfolio/DJSchoolGouda";
+import { FlexAlarm } from "./Portfolio/FlexAlarm";
 import { IswWebsite } from "./Portfolio/IswWebsite";
 import { KokSchilderwerken } from "./Portfolio/KokSchilderwerken";
 import { Montblanc } from "./Portfolio/Montblanc";
@@ -60,6 +61,7 @@ const App = (): ReactElement => {
           <Route path="/" element={<Home />} />
           <Route path="/Portfolio/Armalux/" element={<Armalux />} />
           <Route path="/Portfolio/DJSchoolGouda/" element={<DJSchoolGouda />} />
+          <Route path="/Portfolio/FlexAlarm/" element={<FlexAlarm />} />
           <Route
             path="/Portfolio/Intersoftware-website/"
             element={<IswWebsite />}

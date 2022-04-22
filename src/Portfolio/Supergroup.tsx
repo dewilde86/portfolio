@@ -24,7 +24,7 @@ export const Supergroup = (): ReactElement => {
           Url={getPortfolioTextResources("SupergroupUrl")}
           Description={getPortfolioTextResources("SupergroupDescription")}
           Solution={getPortfolioTextResources("SupergroupSolution")}
-          PrevProject="Montblanc"
+          PrevProject="FlexAlarm"
           NextProject="DJSchoolGouda"
         />
       </main>
