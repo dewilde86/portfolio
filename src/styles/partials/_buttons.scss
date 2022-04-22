@@ -1,0 +1,180 @@
+/*--------------------------------
+            Buttons
+---------------------------------*/
+
+.btn {
+  @include fonts(var(--button-font), 400, rem(14px));
+  padding: 0.375rem 3.4rem;
+  border-radius: var(--border-radius-6);
+  @include transition(all 0.3s ease);
+
+  &.disabled,
+  &:disabled {
+    opacity: 0.35;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &-black {
+    background: var(--black);
+    margin-top: rem(20px);
+    color: var(--white);
+
+    &:disabled,
+    .disabled {
+      &:focus,
+      &:hover,
+      &:active {
+        background: var(--black);
+        color: var(--white);
+      }
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border: rem(1px) solid var(--black);
+      background: var(--white);
+      color: var(--black);
+    }
+  }
+
+  &-white {
+    background: var(--white);
+    border: rem(1px) solid var(--primary-color);
+    color: var(--primary-color);
+
+    &:disabled,
+    .disabled {
+      &:focus,
+      &:hover,
+      &:active {
+        border: rem(1px) solid var(--primary-color);
+        color: var(--primary-color);
+      }
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      background: var(--primary-color);
+      color: var(--white);
+    }
+  }
+
+  &-primary-color {
+    background: var(--primary-color);
+    color: var(--white);
+    letter-spacing: rem(1px);
+
+    &:disabled,
+    .disabled {
+      &:focus,
+      &:hover,
+      &:active {
+        background: var(--primary-color);
+        color: var(--white);
+      }
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border: rem(1px) solid var(--primary-color);
+      background: var(--white);
+      color: var(--primary-color);
+    }
+  }
+
+  &-darkest-grey {
+    background: var(--grey-900);
+    color: var(--white);
+
+    &:disabled,
+    .disabled {
+      &:focus,
+      &:hover,
+      &:active {
+        background: var(--grey-900);
+        color: var(--white);
+      }
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border: rem(1px) solid var(--grey-900);
+      background: var(--white);
+      color: var(--grey-900);
+    }
+  }
+
+  &-reverse {
+    background: var(--primary-color);
+    color: var(--white);
+    border: rem(1px) solid var(--white);
+
+    @include breakpoint(handhelds) {
+      padding: rem(0.5);
+    }
+
+    &:disabled,
+    .disabled {
+      &:focus,
+      &:hover,
+      &:active {
+        background: var(--primary-color);
+        color: var(--white);
+      }
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border: rem(1px) solid var(--white);
+      background: var(--white);
+      color: var(--primary-color);
+    }
+  }
+
+  &-link {
+    background: transparent;
+    color: var(--white);
+    border: rem(1px) solid var(--primary-color);
+    text-decoration: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border: rem(1px) solid var(--primary-color);
+      background: var(--primary-color);
+      color: var(--white);
+    }
+  }
+  &-readmore {
+    background: transparent;
+    color: var(--text-color);
+    border: none;
+
+    @include breakpoint(dark) {
+      color: var(--white);
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      border: none;
+      background: transparent;
+      color: var(--text-color);
+      text-decoration: underline;
+
+      @include breakpoint(dark) {
+        color: var(--white);
+      }
+    }
+  }
+}

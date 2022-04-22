@@ -1,0 +1,139 @@
+/*-----------------------------------
+		Footer
+------------------------------------*/
+
+footer {
+  position: relative;
+  background: var(--white);
+  color: var(--black-700);
+  font-size: rem(12px);
+
+  @include breakpoint(dark) {
+    background: var(--black-700);
+    color: var(--white);
+  }
+
+  .copyright-text {
+    padding: rem(10px) 0 0;
+    text-align: center;
+  }
+
+  .border-top {
+    border-top: rem(1px) solid var(--grey-400);
+
+    @include breakpoint(dark) {
+      border-top: rem(1px) solid var(--white);
+    }
+  }
+
+  .copyright-container {
+    padding: rem(15px) 0 0;
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include make-col(8);
+    }
+
+    @include breakpoint(handhelds) {
+      order: 2;
+      -ms-flex-order: 2;
+    }
+
+    .company-info {
+      line-height: rem(30px);
+
+      @include breakpoint(handhelds) {
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .stay-connected {
+    padding: rem(15px) 0 0;
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include make-col(4);
+    }
+    /* Social buttons */
+    .socialButtons {
+      display: inline-flex;
+      justify-content: flex-start;
+
+      a {
+        display: inline-flex;
+        justify-content: center;
+        width: rem(48px);
+        height: rem(47px);
+        border-radius: 50%;
+        background: var(--grey-300);
+        padding: rem(14px) 0;
+        margin-left: rem(2.5px);
+        margin-right: rem(2.5px);
+
+        @include breakpoint(dark) {
+          background: var(--grey-700);
+        }
+
+        .fab,
+        .fas {
+          font-size: rem(20px);
+          color: var(--white);
+        }
+
+        &:hover {
+          text-decoration: none;
+          background: var(--grey-700);
+
+          @include breakpoint(dark) {
+            background: var(--grey-400);
+          }
+        }
+      }
+    }
+    /* HTML 5 Logo */
+    .html5 {
+      display: inline-flex;
+      justify-content: flex-end;
+
+      img {
+        width: rem(90px);
+        opacity: 0.6;
+      }
+
+      a:hover img {
+        opacity: 0.8;
+        @include transition(all 0.2s ease-in-out);
+      }
+    }
+  }
+}

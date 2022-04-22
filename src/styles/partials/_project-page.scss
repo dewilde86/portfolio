@@ -1,0 +1,224 @@
+/*-----------------------------------------
+            Project details
+------------------------------------------*/
+
+.project {
+  &-img {
+    display: block;
+    background-color: var(--box-schadow-cards);
+    @include box-shadow(0 rem(3px) rem(3px) 0 var(--box-schadow-cards), 0 0 0 rem(1px) var(--grey-400));
+
+    @include breakpoint(dark) {
+      background-color: var(--grey-400);
+    }
+  }
+
+  &-block {
+    @include make-row();
+    position: relative;
+
+    &-img {
+      display: block;
+      width: 100%;
+      background-color: var(--box-schadow-cards);
+      text-align: center;
+      padding: 4vw 0;
+      margin: 0;
+      @include box-shadow(0 rem(3px) rem(3px) 0 var(--box-schadow-cards), 0 0 0 rem(1px) var(--grey-400));
+
+      @include breakpoint(dark) {
+        background-color: var(--grey-400);
+      }
+
+      img {
+        width: rem(800px);
+        margin: 0 auto;
+
+        @include breakpoint(medium-screens) {
+          width: 75%;
+          height: auto !important;
+        }
+
+        @include breakpoint(handhelds) {
+          width: 75%;
+          height: auto !important;
+        }
+      }
+    }
+  }
+
+  &-info {
+    text-align: left;
+
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include make-col(4);
+    }
+
+    @include breakpoint(medium-screens) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(handhelds) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-text-block {
+    text-align: left;
+
+    @include media-breakpoint-up(xs) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col(8);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(8);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include make-col(8);
+    }
+
+    @include breakpoint(medium-screens) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(handhelds) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-footer {
+    @include make-row();
+    justify-content: center;
+    position: relative;
+
+    .project-img {
+      margin: 0;
+    }
+
+    figcaption {
+      @include flex();
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      h3 {
+        color: var(--white);
+        font-size: 6.5vw;
+      }
+
+      a {
+        @include flex();
+        color: var(--white);
+        &:hover {
+          color: var(--primary-color);
+          text-decoration: none;
+
+          .arrow {
+            &:before {
+              border-right: rem(3px) solid var(--primary-color);
+            }
+            &:after {
+              background-color: var(--primary-color);
+            }
+          }
+
+          .text {
+            text-shadow: rem(1px) rem(1px) var(--shadow-1);
+          }
+        }
+      }
+
+      .prev-project {
+        margin-right: 15%;
+
+        @include breakpoint(medium-screens) {
+          margin-right: 5%;
+        }
+
+        @include breakpoint(handhelds) {
+          margin-right: 5%;
+        }
+
+        .arrow {
+          top: rem(-3px);
+        }
+      }
+
+      .next-project {
+        margin-left: 15%;
+
+        @include breakpoint(medium-screens) {
+          margin-left: 5%;
+        }
+
+        @include breakpoint(handhelds) {
+          margin-left: 5%;
+        }
+
+        .text {
+          left: 67%;
+        }
+
+        .arrow {
+          top: rem(6px);
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+      }
+
+      .text {
+        display: inline-flex;
+        letter-spacing: 0.1rem;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-shadow: rem(1px) rem(1px) var(--shadow-1);
+      }
+    }
+  }
+}
+
+.container {
+  .project-block {
+    padding: 8vw 0;
+
+    @include breakpoint(handhelds) {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: rem(15px);
+      padding-right: rem(15px);
+    }
+  }
+}

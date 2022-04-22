@@ -1,0 +1,285 @@
+/*-----------------------------------------
+            Skill items
+------------------------------------------*/
+
+.skill-set {
+  &-item {
+    @include flex();
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.4rem 4.4rem;
+
+    @include breakpoint(handhelds) {
+      margin: 3.2rem 0.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-icon {
+    width: 10.5%;
+    align-self: center;
+    z-index: 99;
+
+    @include breakpoint(medium-screens) {
+      width: 30.5%;
+      margin-right: rem(20px);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+  }
+
+  &-detail {
+    width: 85.5%;
+  }
+  &-meta {
+    @include flex();
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+  &-name {
+    @include flex();
+    align-items: flex-end;
+  }
+
+  &-ratio {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: var(--black-700);
+
+    @include breakpoint(handhelds) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint(dark) {
+      color: var(--white);
+    }
+  }
+  &-high {
+    color: var(--primary-color);
+    @include breakpoint(dark) {
+      color: var(--white);
+    }
+  }
+
+  &-bar {
+    width: 1%;
+    height: 1.4rem;
+    background: var(--white);
+    position: relative;
+    z-index: 999;
+    border-radius: var(--border-radius-10);
+    @include box-shadow(0 rem(5px) rem(15px) 0 rgba(7, 33, 66, 0.15));
+
+    @include breakpoint(handhelds) {
+      height: 0.7rem;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-radius: var(--border-radius-10);
+      width: 1%;
+    }
+
+    &.p90 {
+      &:after {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(var(--black-700)),
+          color-stop(42%, var(--primary-color-lighter)),
+          to(var(--primary-color))
+        );
+        background-image: -webkit-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 42%,
+          var(--primary-color)
+        );
+        background-image: -o-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 42%,
+          var(--primary-color)
+        );
+        background-image: linear-gradient(
+          to right,
+          var(--black-700),
+          var(--primary-color-lighter) 42%,
+          var(--primary-color)
+        );
+      }
+
+      &.in {
+        &:after {
+          @include animation(ratio90 1.5s forwards);
+        }
+      }
+    }
+    &.p80 {
+      &:after {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(var(--black-700)),
+          color-stop(50%, var(--primary-color-lighter)),
+          to(var(--primary-color))
+        );
+        background-image: -webkit-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 50%,
+          var(--primary-color)
+        );
+        background-image: -o-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 50%,
+          var(--primary-color)
+        );
+        background-image: linear-gradient(
+          to right,
+          var(--black-700),
+          var(--primary-color-lighter) 50%,
+          var(--primary-color)
+        );
+      }
+
+      &.in {
+        &:after {
+          @include animation(ratio80 1.5s forwards);
+        }
+      }
+    }
+    &.p70 {
+      &:after {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(var(--black-700)),
+          color-stop(65%, var(--primary-color-lighter)),
+          to(var(--primary-color))
+        );
+        background-image: -webkit-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 65%,
+          var(--primary-color)
+        );
+        background-image: -o-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 65%,
+          var(--primary-color)
+        );
+        background-image: linear-gradient(
+          to right,
+          var(--black-700),
+          var(--primary-color-lighter) 65%,
+          var(--primary-color)
+        );
+      }
+
+      &.in {
+        &:after {
+          @include animation(ratio70 1.5s forwards);
+        }
+      }
+    }
+    &.p60 {
+      &:after {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(var(--black-700)),
+          color-stop(75%, var(--primary-color-lighter)),
+          to(var(--primary-color))
+        );
+        background-image: -webkit-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 75%,
+          var(--primary-color)
+        );
+        background-image: -o-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 75%,
+          var(--primary-color)
+        );
+        background-image: linear-gradient(
+          to right,
+          var(--black-700),
+          var(--primary-color-lighter) 75%,
+          var(--primary-color)
+        );
+      }
+
+      &.in {
+        &:after {
+          @include animation(ratio60 1.5s forwards);
+        }
+      }
+    }
+    &.p50 {
+      &:after {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(var(--black-700)),
+          color-stop(65%, var(--primary-color-lighter))
+        );
+        background-image: -webkit-linear-gradient(left, var(--black-700), var(--primary-color-lighter) 65%);
+        background-image: -o-linear-gradient(left, var(--black-700), var(--primary-color-lighter) 65%);
+        background-image: linear-gradient(to right, var(--black-700), var(--primary-color-lighter) 65%);
+      }
+
+      &.in {
+        &:after {
+          @include animation(ratio50 1.5s forwards);
+        }
+      }
+    }
+    &.p40 {
+      &:after {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          from(var(--black-700)),
+          color-stop(65%, var(--primary-color-lighter))
+        );
+        background-image: -webkit-linear-gradient(left, var(--black-700), var(--primary-color-lighter) 65%);
+        background-image: -o-linear-gradient(left, var(--black-700), var(--primary-color-lighter) 65%);
+        background-image: linear-gradient(to right, var(--black-700), var(--primary-color-lighter) 65%);
+      }
+
+      &.in {
+        &:after {
+          @include animation(ratio40 1.5s forwards);
+        }
+      }
+    }
+  }
+}

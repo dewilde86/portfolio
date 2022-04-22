@@ -1,0 +1,69 @@
+/*--------------------------------
+            Icons
+---------------------------------*/
+
+.icon {
+  &-grid {
+    z-index: 99;
+    text-align: center;
+    @include media-breakpoint-up(xs) {
+      @include make-col(6);
+    }
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(2);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include make-col(2);
+    }
+  }
+
+  &-container {
+    width: rem(150px);
+    height: rem(150px);
+    display: inline-flex;
+    margin: rem(15px) 0;
+    z-index: 99;
+
+    figure {
+      width: auto;
+    }
+  }
+
+  &-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    background: var(--primary-color);
+    z-index: 99;
+
+    figure {
+      margin-top: rem(-20px);
+    }
+
+    img {
+      width: rem(60px);
+      height: rem(60px);
+    }
+
+    label {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(50% + 2.3rem);
+      transform: translate(0%, -50%);
+      text-align: center;
+      color: var(--white);
+    }
+  }
+}

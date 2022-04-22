@@ -1,0 +1,76 @@
+/* ------------------------------------------------------------------------------------------------- 
+    Variables (HTML5)
+------------------------------------------------------------------------------------------------- */
+
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --grey-100: #f7f7f7;
+  --grey-300: #ececec;
+  --grey-400: #d5d5d6;
+  --grey-700: #b3b7ba;
+  --grey-900: #878c90;
+  --black-700: #2e3131;
+  --black: #000000;
+  --primary-color: #8d736c;
+  --primary-color-lighter: #685550;
+  --succes-green: #2eae4a;
+  --warning-yellow: #f1c40f;
+  --waring-yellow-border: #efc319;
+  --warning-yellow-background: #fcf3d1;
+  --validation-red-text: #d61919;
+  --validation-red-dark-text: #f66076;
+  --validation-red-border: #dc3545;
+  --validation-bg-red: #f7d1d1;
+
+  /* Text Color */
+  --text-color: var(--black-700);
+  --header-color: var(--black-700);
+  --subtitle-color: var(--grey-900);
+
+  /* Shadows */
+  --shadow-01: rgba(0, 0, 0, 0.1);
+  --shadow-02: rgba(0, 0, 0, 0.2);
+  --shadow-03: rgba(0, 0, 0, 0.3);
+  --shadow-04: rgba(0, 0, 0, 0.4);
+  --shadow-05: rgba(0, 0, 0, 0.5);
+  --shadow-06: rgba(0, 0, 0, 0.6);
+  --shadow-07: rgba(0, 0, 0, 0.7);
+  --shadow-08: rgba(0, 0, 0, 0.8);
+  --shadow-09: rgba(0, 0, 0, 0.9);
+  --shadow-1: rgba(0, 0, 0, 1);
+  --box-schadow-cards: rgba(213, 213, 214, 0.6);
+  --form-outline-shadow: rgba(141, 115, 108, 0.25);
+
+  /* Border-radius */
+  --border-radius-1: 1px;
+  --border-radius-2: 2px;
+  --border-radius-3: 3px;
+  --border-radius-4: 4px;
+  --border-radius-5: 5px;
+  --border-radius-6: 6px;
+  --border-radius-7: 7px;
+  --border-radius-8: 8px;
+  --border-radius-9: 9px;
+  --border-radius-10: 10px;
+  --border-radius-50: 50%;
+}
+
+/* Sass Variable */
+$primary-color: #8d736c;
+$white: #ffffff;
+$html-font-size: 16px;
+
+/* Path */
+$images: "/assets/images/";
+$icons-path: "/assets/images/icons/";
+$skills: "/assets/images/skills/";
+$project-logos: "/assets/images/projects/logos/";
+
+/* Custom Bootstrap sizes (w-50) */
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);

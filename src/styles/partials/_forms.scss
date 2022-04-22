@@ -1,0 +1,65 @@
+/*-----------------------------------
+		Forms
+------------------------------------*/
+
+.input-group {
+  &-text {
+    color: var(--white);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--primary-color);
+    border: rem(1px) solid var(--primary-color);
+    border-radius: var(--border-radius-6);
+  }
+
+  &.has-error {
+    .input-group-text {
+      background-color: var(--validation-red-border);
+      border: rem(1px) solid var(--validation-red-border);
+    }
+    .form-control {
+      border-color: var(--validation-red-border);
+      background: var(--validation-bg-red);
+    }
+  }
+}
+
+.form-control {
+  @include fonts(var(--text-font), 400, rem(14px), var(--text-color));
+  border-color: var(--primary-color);
+  border-radius: var(--border-radius-6);
+
+  @include breakpoint(dark) {
+    background-color: var(--black-700);
+    color: var(--white);
+  }
+
+  &:focus {
+    border-color: var(--primary-color);
+    @include box-shadow(0 0 0 0.2rem var(--form-outline-shadow));
+
+    @include breakpoint(dark) {
+      background-color: var(--black-700);
+      color: var(--white);
+    }
+  }
+}
+
+textarea.form-control {
+  height: rem(100px);
+}
+
+.invalid-feedback {
+  @include flex();
+  padding: rem(5px) 0 0;
+  font-size: rem(13px);
+  color: var(--validation-red-text);
+
+  @include breakpoint(dark) {
+    color: var(--validation-red-dark-text);
+  }
+}
+
+[placeholder] {
+  @include placeholder(var(--black-700));
+}

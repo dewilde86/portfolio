@@ -1,0 +1,128 @@
+/*-----------------------------------------
+           Customer Logo's
+------------------------------------------*/
+
+.customer-brand {
+  @include flex();
+  width: 100%;
+  background-position: left center;
+  background-repeat: no-repeat;
+
+  @include breakpoint(medium-screens) {
+    height: rem(75px) !important;
+  }
+
+  &.armalux {
+    background-image: url("#{$project-logos}Armalux-Logo.svg");
+    height: rem(100px);
+    background-size: 50%;
+  }
+
+  &.djschoolgouda {
+    background-image: url("#{$project-logos}DJSchoolGouda-Logo.svg");
+    height: rem(100px);
+  }
+
+  &.flexalarm {
+    background-image: url("#{$project-logos}FlexAlarm-Logo.svg");
+    height: rem(100px);
+
+    @include breakpoint(dark) {
+      background-image: url("#{$project-logos}FlexAlarm-Logo-White.svg");
+    }
+  }
+
+  &.intersoftware {
+    background-image: url("#{$project-logos}Intersoftware-Logo.svg");
+    height: rem(65px);
+    margin-left: rem(-16px);
+
+    @include breakpoint(dark) {
+      background-image: url("#{$project-logos}Intersoftware-Logo-white.svg");
+    }
+  }
+
+  &.kokschilderwerken {
+    background-image: url("#{$project-logos}KokSchilderwerken-Logo.svg");
+    height: rem(100px);
+
+    @include breakpoint(dark) {
+      background-image: url("#{$project-logos}KokSchilderwerken-Logo-White.svg");
+    }
+  }
+
+  &.montblanc {
+    background-image: url("#{$project-logos}Montblanc-Logo.svg");
+    height: rem(50px);
+    background-size: contain;
+  }
+
+  &.oracoaching {
+    background-image: url("#{$project-logos}Oracoaching-Logo.svg");
+    height: rem(100px);
+  }
+
+  &.oudebegraafplaatsgouda {
+    background-image: url("#{$project-logos}OudebegraafplaatsGouda-Logo.svg");
+    height: rem(130px);
+    background-size: contain;
+
+    @include breakpoint(dark) {
+      background-image: url("#{$project-logos}OudebegraafplaatsGouda-Logo-White.svg");
+    }
+  }
+
+  &.rdw {
+    background-image: url("#{$project-logos}Rdw-Logo.svg");
+    height: rem(100px);
+  }
+
+  &.softvalue {
+    background-image: url("#{$project-logos}Softvalue-Logo.svg");
+    width: rem(200px);
+    height: rem(100px);
+  }
+
+  &.strongerbodystrongermind {
+    background-image: url("#{$project-logos}StrongerBodyStrongerMind-Logo.svg");
+    height: rem(100px);
+
+    @include breakpoint(dark) {
+      background-image: url("#{$project-logos}StrongerBodyStrongerMind-Logo-white.svg");
+    }
+  }
+
+  &.superfuif {
+    background-image: url("#{$project-logos}Superfuif-Logo.svg");
+    height: rem(100px);
+  }
+
+  &.supergroup {
+    background-image: url("#{$project-logos}Supergroup-Logo.svg");
+    width: rem(200px);
+    height: rem(100px);
+
+    @include breakpoint(dark) {
+      background-image: url("#{$project-logos}Supergroup-Logo-White.svg");
+    }
+  }
+
+  &.supertech {
+    background-image: url("#{$project-logos}Supertech-Logo.svg");
+    height: rem(100px);
+
+    @include breakpoint(dark) {
+      background-image: url("#{$project-logos}Supertech-Logo-White.svg");
+    }
+  }
+
+  &.validat {
+    background-image: url("#{$project-logos}Validat-Logo.svg");
+    width: rem(200px);
+    height: rem(100px);
+
+    @include breakpoint(dark) {
+      background-image: url("#{$project-logos}Validat-Logo-White.svg");
+    }
+  }
+}

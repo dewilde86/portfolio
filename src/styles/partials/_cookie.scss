@@ -1,0 +1,54 @@
+/*-----------------------------------------
+            Cookie message
+------------------------------------------*/
+
+.cookie {
+  &-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: url("#{$images}Cookie.svg") rem(20px) rem(20px) no-repeat;
+    background-size: rem(30px) rem(30px);
+    background-color: rgba(141, 115, 108, 0.882353);
+
+    @include breakpoint(handhelds) {
+      background-position: rem(15px) rem(15px);
+    }
+
+    .button-close {
+      position: absolute;
+      right: rem(35px);
+      top: 22%;
+      @include transition(all 0.5s cubic-bezier(0.12, 0, 0.39, 0));
+      @include box-shadow(none);
+      cursor: pointer;
+
+      @include breakpoint(handhelds) {
+        position: relative;
+        @include flex();
+        justify-content: center;
+        top: auto;
+        right: auto;
+        margin: 0 auto rem(10px);
+      }
+    }
+  }
+
+  &-message {
+    display: block;
+    padding: rem(14px) rem(67px);
+    margin-right: rem(244px);
+    color: var(--white);
+    font-weight: 300;
+    line-height: 1.3;
+    text-align: left;
+
+    @include breakpoint(handhelds) {
+      padding: rem(14px);
+      margin-top: rem(40px);
+      margin-right: auto;
+    }
+  }
+}

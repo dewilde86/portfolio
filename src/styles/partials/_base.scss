@@ -1,0 +1,501 @@
+/*------------------------------------------------------------------------------------------------- 
+    
+    Base file, set-up the Sass environment
+
+------------------------------------------------------------------------------------------------- */
+
+/*------------------------------------------------------------------------------------------------- 
+    Import all Module files
+------------------------------------------------------------------------------------------------- */
+
+@import "../modules/_all.scss";
+
+/*------------------------------------------------------------------------------------------------- 
+    Generic
+------------------------------------------------------------------------------------------------- */
+body {
+  position: relative;
+  height: 100%;
+  background: var(--white);
+  @include fonts(var(--text-font), 300, rem(14px), var(--text-color));
+  letter-spacing: normal;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include breakpoint(dark) {
+    background: var(--black-700);
+    color: var(--white);
+  }
+}
+
+.App {
+  overflow: hidden;
+}
+
+header,
+.parallax-container,
+.aboutme,
+.portfolio,
+.service,
+.contact {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.project-page {
+  overflow: hidden;
+
+  main {
+    margin-top: 77px;
+  }
+}
+
+h1 {
+  @include fonts(var(--header-font), 700, rem(25px), var(--header-color));
+}
+
+h2,
+h3,
+h4 {
+  @include fonts(var(--header-font), 700, rem(20px), var(--header-color));
+  display: block;
+
+  @include breakpoint(dark) {
+    color: var(--white);
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.subtitle {
+  @include fonts(var(--text-font), 400, rem(16px), var(--header-color));
+
+  @include breakpoint(dark) {
+    color: var(--white);
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.header-bar {
+  margin: rem(10px) 0 rem(30px) 0;
+  width: rem(70px);
+  height: rem(4px);
+  background: var(--text-color);
+
+  @include breakpoint(dark) {
+    background: var(--white);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+
+  @include breakpoint(dark) {
+    color: lighten($primary-color, 15%);
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: darken($primary-color, 15%);
+    text-decoration: underline;
+
+    @include breakpoint(dark) {
+      color: lighten($primary-color, 20%);
+    }
+  }
+}
+
+.grey-link {
+  color: var(--grey-400);
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: var(--grey-700);
+    text-decoration: underline;
+  }
+}
+
+.near-black-link {
+  color: var(--black-700);
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: var(--black-700);
+    text-decoration: underline;
+  }
+}
+
+.flex {
+  @include flex();
+  @include flex-direction(column);
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.text-shadow-1 {
+  text-shadow: rem(1px) rem(1px) var(--shadow-1);
+}
+
+.text-block {
+  padding-left: 4.4rem;
+  padding-right: 4.4rem;
+
+  @include breakpoint(handhelds) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.text-center {
+  @include breakpoint(handhelds) {
+    text-align: left !important;
+  }
+}
+
+.button-wrapper {
+  @include flex();
+  width: 100%;
+  padding: 2rem 2rem 0 0;
+
+  .btn-readmore {
+    i {
+      color: var(--text-font);
+      vertical-align: middle;
+      @include breakpoint(dark) {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+/*-----------------------------------
+	Brand Logo
+------------------------------------*/
+.brand-logo {
+  background: url("#{$images}Rdw-Logo.svg") center center no-repeat;
+  width: rem(60px);
+  height: rem(60px);
+  margin: 0 0 0 0.55rem;
+
+  @include breakpoint(dark) {
+    background: url("#{$images}Rdw-Logo-White.svg") center center no-repeat;
+  }
+}
+
+/*-----------------------------------
+	Helper classes
+------------------------------------*/
+.noPadding {
+  padding: 0;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.noBorder {
+  border: 0;
+}
+
+.mt-9 {
+  margin-top: $spacer * 4.5;
+}
+
+.mt-1-7 {
+  margin-top: $spacer * 1.7;
+}
+
+.pt-9 {
+  padding-top: $spacer * 4;
+}
+
+.pt-10 {
+  padding-top: $spacer * 4.5;
+}
+
+.pt-15 {
+  padding-top: $spacer * 7;
+}
+
+/*-----------------------------------
+	Header and Parallax background
+------------------------------------*/
+.background,
+.parallax {
+  &-container {
+    position: relative;
+    width: 100%;
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint(handhelds) {
+      background-attachment: scroll;
+      background-position: top;
+    }
+  }
+}
+
+.background {
+  &-container {
+    height: 100vh;
+
+    @include breakpoint(handhelds) {
+      height: rem(300px);
+    }
+  }
+
+  &-caption {
+    position: absolute;
+
+    h1 {
+      font-size: rem(35px);
+      text-shadow: rem(1px) rem(1px) var(--box-schadow-cards);
+
+      @include breakpoint(handhelds) {
+        font-size: rem(15px);
+      }
+
+      .highlight {
+        font-size: rem(46px);
+
+        @include breakpoint(handhelds) {
+          font-size: rem(20px);
+        }
+      }
+    }
+
+    .btn {
+      padding: 0.375rem 2.4rem;
+    }
+  }
+}
+
+.parallax {
+  &-container {
+    height: rem(600px);
+
+    @include breakpoint(extra-wide-screens) {
+      height: rem(1500px);
+    }
+
+    @include breakpoint(handhelds) {
+      height: rem(300px);
+    }
+  }
+}
+
+/*-----------------------------------
+	Skew options on the main components
+------------------------------------*/
+.aboutme,
+.portfolio,
+.service {
+  background: var(--white);
+  padding: rem(20px) 0 rem(100px);
+
+  @include breakpoint(dark) {
+    background-color: var(--black-700);
+  }
+
+  &:before {
+    content: "";
+    background: var(--white);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: rem(-50px);
+    -webkit-transform: skew(0, 3deg);
+    transform: skew(0, 3deg);
+    z-index: 0;
+
+    @include breakpoint(dark) {
+      background-color: var(--black-700);
+    }
+
+    @include breakpoint(extra-wide-screens) {
+      height: rem(375px);
+      top: rem(-180px);
+    }
+
+    @include breakpoint(handhelds) {
+      top: rem(-20px);
+    }
+  }
+
+  &:after {
+    content: "";
+    background: var(--white);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: rem(-50px);
+    -webkit-transform: skew(0, -3deg);
+    transform: skew(0, -3deg);
+    z-index: 1;
+
+    @include breakpoint(dark) {
+      background-color: var(--black-700);
+    }
+
+    @include breakpoint(extra-wide-screens) {
+      height: rem(375px);
+      bottom: rem(-180px);
+    }
+
+    @include breakpoint(handhelds) {
+      bottom: rem(-20px);
+    }
+  }
+}
+
+.service {
+  padding: rem(20px) 0 rem(30px) !important;
+
+  figure {
+    width: rem(500px);
+    margin: 0 auto;
+
+    @include breakpoint(medium-screens) {
+      max-width: rem(400px);
+    }
+
+    @include breakpoint(handhelds) {
+      max-width: rem(500px);
+    }
+
+    .websites,
+    .brainstorm {
+      @include breakpoint(handhelds) {
+        max-width: 77%;
+        height: rem(190px);
+      }
+    }
+
+    .websites {
+      background: url("#{$images}/service/websites.svg") center center no-repeat;
+      height: rem(500px);
+
+      @include breakpoint(handhelds) {
+        height: rem(360px);
+        background-position: left;
+      }
+    }
+
+    .brainstorm {
+      background: url("#{$images}/service/brainstorm.svg") center center
+        no-repeat;
+      height: rem(275px);
+
+      @include breakpoint(medium-screens) {
+        height: rem(190px);
+      }
+
+      @include breakpoint(handhelds) {
+        height: rem(190px);
+        background-position: left;
+      }
+    }
+
+    img {
+      max-width: 100%;
+
+      @include breakpoint(handhelds) {
+        max-width: 70%;
+      }
+    }
+  }
+}
+
+.contact {
+  background: var(--white);
+  padding: rem(20px) 0 rem(50px);
+
+  @include breakpoint(dark) {
+    background-color: var(--black-700);
+  }
+
+  &:before {
+    content: "";
+    background: var(--white);
+    width: 100%;
+    height: rem(100px);
+    position: absolute;
+    top: rem(-50px);
+    -webkit-transform: skew(0, 3deg);
+    transform: skew(0, 3deg);
+
+    @include breakpoint(dark) {
+      background-color: var(--black-700);
+    }
+
+    @include breakpoint(extra-wide-screens) {
+      height: rem(375px);
+      bottom: rem(-180px);
+    }
+
+    @include breakpoint(handhelds) {
+      top: rem(-20px);
+    }
+  }
+}
+
+/*-----------------------------------
+	Arrow
+------------------------------------*/
+
+.arrow {
+  position: relative;
+  width: rem(50px);
+  height: rem(20px);
+
+  @include breakpoint(handhelds) {
+    display: none;
+  }
+
+  &:before {
+    content: "";
+    display: inline-flex;
+    position: relative;
+    top: rem(-1px);
+    border-top: rem(3px) solid transparent;
+    border-bottom: rem(3px) solid transparent;
+    border-right: rem(3px) solid var(--white);
+  }
+
+  &:after {
+    content: "";
+    display: inline-flex;
+    width: 80%;
+    height: rem(2px);
+    background-color: var(--white);
+  }
+}
