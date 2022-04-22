@@ -120,20 +120,5 @@ footer {
         }
       }
     }
-    /* HTML 5 Logo */
-    .html5 {
-      display: inline-flex;
-      justify-content: flex-end;
-
-      img {
-        width: rem(90px);
-        opacity: 0.6;
-      }
-
-      a:hover img {
-        opacity: 0.8;
-        @include transition(all 0.2s ease-in-out);
-      }
-    }
   }
 }
