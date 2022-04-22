@@ -38,7 +38,7 @@ export const Footer = (props: { borderTop?: boolean }): ReactElement => {
               </Link>{" "}
             </p>
           </div>
-          <div className="stay-connected d-flex justify-content-between">
+          <div className="stay-connected d-flex justify-content-end">
             <div className="socialButtons">
               <a
                 href="https://www.facebook.com/rdewildenl"
@@ -63,19 +63,6 @@ export const Footer = (props: { borderTop?: boolean }): ReactElement => {
               </a>
               <a href="/docs/CV.pdf" target="_blank" rel="noopener noreferrer">
                 <i className="cv fas fa-file-invoice" />
-              </a>
-            </div>
-            <div className="html5">
-              <a
-                href="https://validator.w3.org/check?uri=http%3A%2F%2Fwww.rdewilde.nl%2F;ss=1;outline=1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-device.png"
-                  alt="HTML5 Powered with CSS3 / Styling, and Device Access"
-                  title="HTML5 Powered with CSS3 / Styling, and Device Access"
-                />
               </a>
             </div>
           </div>

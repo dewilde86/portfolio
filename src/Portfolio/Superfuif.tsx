@@ -20,7 +20,7 @@ export const Superfuif = (): ReactElement => {
           Role={getGeneralTextResources("InterfaceAnddevelopment")}
           ProjectImage="Superfuif"
           FullWebsiteImageHeight={2257}
-          Tools={getPortfolioTextResources("UsedToolsWordpress")}
+          Tools={getPortfolioTextResources("SuperfuifUsedTools")}
           Url={getPortfolioTextResources("SuperfuifUrl")}
           Description={getPortfolioTextResources("SuperfuifDescription")}
           Solution={getPortfolioTextResources("SuperfuifSolution")}

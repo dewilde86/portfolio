@@ -38,7 +38,11 @@ AOS.init({
   useClassNames: true,
 });
 
-const App = (): ReactElement => {
+type props = {
+  tab: string;
+};
+
+const App = ({ tab }: props): ReactElement => {
   const message = getCookieNotificationTextResources("CookieMessage");
 
   return (

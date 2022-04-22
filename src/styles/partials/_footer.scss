@@ -95,13 +95,13 @@ footer {
         width: rem(48px);
         height: rem(47px);
         border-radius: 50%;
-        background: var(--grey-300);
+        background: lighten($primary-color, 20%);
         padding: rem(14px) 0;
         margin-left: rem(2.5px);
         margin-right: rem(2.5px);
 
         @include breakpoint(dark) {
-          background: var(--grey-700);
+          background: lighten($primary-color, 30%);
         }
 
         .fab,
@@ -112,10 +112,10 @@ footer {
 
         &:hover {
           text-decoration: none;
-          background: var(--grey-700);
+          background: var(--primary-color);
 
           @include breakpoint(dark) {
-            background: var(--grey-400);
+            background: var(--primary-color);
           }
         }
       }

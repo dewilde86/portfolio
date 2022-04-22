@@ -5,7 +5,7 @@ export const Card = (props: {
   className?: string;
   imageSrc: string;
   imageAlt: string;
-  height?: string;
+  height?: number;
   link: string;
   customerName: string;
 }): ReactElement => {
@@ -24,7 +24,7 @@ export const Card = (props: {
           <img
             src={`/images/portfolio/` + imageSrc + `.png`}
             alt={imageAlt}
-            style={{ height: height }}
+            style={{ height: height + `px` }}
           />
           <figcaption>
             <h4>{customerName}</h4>
