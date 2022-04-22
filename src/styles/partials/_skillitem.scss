@@ -4,7 +4,7 @@
 
 .skill-set {
   &-item {
-    @include flex();
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 3.4rem 4.4rem;
@@ -45,12 +45,12 @@
     width: 85.5%;
   }
   &-meta {
-    @include flex();
+    display: flex;
     justify-content: space-between;
     margin-bottom: 0.8rem;
   }
   &-name {
-    @include flex();
+    display: flex;
     align-items: flex-end;
   }
 
@@ -250,9 +250,21 @@
           from(var(--black-700)),
           color-stop(65%, var(--primary-color-lighter))
         );
-        background-image: -webkit-linear-gradient(left, var(--black-700), var(--primary-color-lighter) 65%);
-        background-image: -o-linear-gradient(left, var(--black-700), var(--primary-color-lighter) 65%);
-        background-image: linear-gradient(to right, var(--black-700), var(--primary-color-lighter) 65%);
+        background-image: -webkit-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 65%
+        );
+        background-image: -o-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 65%
+        );
+        background-image: linear-gradient(
+          to right,
+          var(--black-700),
+          var(--primary-color-lighter) 65%
+        );
       }
 
       &.in {
@@ -270,9 +282,21 @@
           from(var(--black-700)),
           color-stop(65%, var(--primary-color-lighter))
         );
-        background-image: -webkit-linear-gradient(left, var(--black-700), var(--primary-color-lighter) 65%);
-        background-image: -o-linear-gradient(left, var(--black-700), var(--primary-color-lighter) 65%);
-        background-image: linear-gradient(to right, var(--black-700), var(--primary-color-lighter) 65%);
+        background-image: -webkit-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 65%
+        );
+        background-image: -o-linear-gradient(
+          left,
+          var(--black-700),
+          var(--primary-color-lighter) 65%
+        );
+        background-image: linear-gradient(
+          to right,
+          var(--black-700),
+          var(--primary-color-lighter) 65%
+        );
       }
 
       &.in {

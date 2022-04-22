@@ -50,7 +50,7 @@ textarea.form-control {
 }
 
 .invalid-feedback {
-  @include flex();
+  display: flex;
   padding: rem(5px) 0 0;
   font-size: rem(13px);
   color: var(--validation-red-text);

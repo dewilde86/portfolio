@@ -27,7 +27,7 @@
 
       @include breakpoint(handhelds) {
         position: relative;
-        @include flex();
+        display: flex;
         justify-content: center;
         top: auto;
         right: auto;

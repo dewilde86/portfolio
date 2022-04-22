@@ -89,13 +89,19 @@ export const Aboutme = (): ReactElement => {
             />
             <SkillItem skill="React" className="p70" ratio={70} name="React" />
             <SkillItem
+              skill="Angular"
+              className="p50"
+              ratio={50}
+              name="Angular"
+            />
+          </div>
+          <div className="col-12 col-md-6">
+            <SkillItem
               skill="Git-versiebeheer"
               className="p70"
               ratio={70}
               name="Git"
             />
-          </div>
-          <div className="col-12 col-md-6">
             <SkillItem
               skill="Photoshop"
               className="p70"

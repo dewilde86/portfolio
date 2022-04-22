@@ -42,7 +42,7 @@
     }
 
     figcaption {
-      @include flex();
+      display: flex;
       @include flex-direction(column);
       align-items: center;
       justify-content: center;

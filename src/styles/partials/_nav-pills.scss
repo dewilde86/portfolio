@@ -18,7 +18,7 @@
 
   /* Navigation right Normal */
   .nav-pills {
-    @include flex();
+    display: flex;
     @include flex-direction(column);
 
     a {
