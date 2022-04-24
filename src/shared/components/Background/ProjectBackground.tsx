@@ -1,12 +1,8 @@
-import { ReactElement } from "react";
-
 type BackgroundProps = {
   ProjectImage: string;
 };
 
-export const ProjectBackground = ({
-  ProjectImage,
-}: BackgroundProps): ReactElement => {
+export const ProjectBackground = ({ ProjectImage }: BackgroundProps) => {
   return (
     <div className="container-fluid">
       <div className="row">

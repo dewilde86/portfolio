@@ -1,10 +1,9 @@
-import { ReactElement } from "react";
 import { ProjectDetails } from "../shared/components/ProjectDetails/ProjectDetails";
 import TopNavigationbar from "../shared/components/TopNavigationbar/TopNavigationbar";
 import { Footer } from "../shared/components/Footer/Footer";
 import { getPortfolioTextResources } from "../shared/utils/text-resources";
 
-export const FlexAlarm = (): ReactElement => {
+export const FlexAlarm = () => {
   return (
     <div className="project-page">
       <header id="header">
@@ -17,7 +16,7 @@ export const FlexAlarm = (): ReactElement => {
           CustomerInfo={getPortfolioTextResources("FlexalarmCustomerInfo")}
           Role={getPortfolioTextResources("FlexalarmRole")}
           ProjectImage="Flexalarm"
-          FullWebsiteImageHeight={1801}
+          FullWebsiteImageHeight={2142}
           Products={getPortfolioTextResources("FlexalarmProducts")}
           Tools={getPortfolioTextResources("UsedToolsWordpress")}
           Description={getPortfolioTextResources("FlexalarmDescription")}

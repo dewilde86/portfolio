@@ -1,8 +1,7 @@
-import { ReactElement } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import Scrollspy from "react-scrollspy";
 
-export const NavPills = (): ReactElement => {
+export const NavPills = () => {
   return (
     <div className="rightNav">
       <Scrollspy

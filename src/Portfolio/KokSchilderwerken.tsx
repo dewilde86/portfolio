@@ -1,11 +1,10 @@
-import { ReactElement } from "react";
 import { ProjectDetails } from "../shared/components/ProjectDetails/ProjectDetails";
 import TopNavigationbar from "../shared/components/TopNavigationbar/TopNavigationbar";
 import { Footer } from "../shared/components/Footer/Footer";
 import { getPortfolioTextResources } from "../shared/utils/text-resources";
 import { getGeneralTextResources } from "../shared/utils/text-resources-algemeen";
 
-export const KokSchilderwerken = (): ReactElement => {
+export const KokSchilderwerken = () => {
   return (
     <div className="project-page">
       <header id="header">
@@ -25,7 +24,6 @@ export const KokSchilderwerken = (): ReactElement => {
           FullWebsiteImageHeight={1645}
           Products={getPortfolioTextResources("Products")}
           Tools={getPortfolioTextResources("UsedToolsWordpress")}
-          Url={getPortfolioTextResources("KokSchilderwerkUrl")}
           Description={getPortfolioTextResources("KokSchilderwerkDescription")}
           Solution={getPortfolioTextResources("KokSchilderwerkSolution")}
           PrevProject="Armalux"

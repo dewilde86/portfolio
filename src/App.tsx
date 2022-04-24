@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { AlgemeneVoorwaarden } from "./AlgemeneVoorwaarden/AlgemeneVoorwaarden";
@@ -42,7 +41,7 @@ type props = {
   tab: string;
 };
 
-const App = ({ tab }: props): ReactElement => {
+const App = ({ tab }: props) => {
   const message = getCookieNotificationTextResources("CookieMessage");
 
   return (

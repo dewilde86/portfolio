@@ -1,10 +1,8 @@
-import { ReactElement } from "react";
-
 type BackgroundProps = {
   imgUrl: string;
 };
 
-export const ParallaxImage = ({ imgUrl }: BackgroundProps): ReactElement => {
+export const ParallaxImage = ({ imgUrl }: BackgroundProps) => {
   return (
     <picture>
       <div className="parallax-container">

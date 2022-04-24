@@ -1,11 +1,10 @@
-import { ReactElement } from "react";
 import { ProjectDetails } from "../shared/components/ProjectDetails/ProjectDetails";
 import TopNavigationbar from "../shared/components/TopNavigationbar/TopNavigationbar";
 import { Footer } from "../shared/components/Footer/Footer";
 import { getPortfolioTextResources } from "../shared/utils/text-resources";
 import { getGeneralTextResources } from "../shared/utils/text-resources-algemeen";
 
-export const Supergroup = (): ReactElement => {
+export const Supergroup = () => {
   return (
     <div className="project-page">
       <header id="header">

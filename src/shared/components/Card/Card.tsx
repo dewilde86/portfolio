@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
 export const Card = (props: {
@@ -8,7 +7,7 @@ export const Card = (props: {
   height?: number;
   link: string;
   customerName: string;
-}): ReactElement => {
+}) => {
   const {
     className = "all-cards-same-size",
     imageSrc,

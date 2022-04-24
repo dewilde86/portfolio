@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-
 export const ProjectDetails = (props: {
   ProjectImage: string;
   FullWebsiteImageHeight: number;
@@ -14,7 +12,7 @@ export const ProjectDetails = (props: {
   Solution: string;
   PrevProject: string;
   NextProject: string;
-}): ReactElement => {
+}) => {
   const {
     ProjectImage,
     FullWebsiteImageHeight,

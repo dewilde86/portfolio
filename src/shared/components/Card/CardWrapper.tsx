@@ -1,4 +1,4 @@
-import React, { ReactNode, ReactElement } from "react";
+import React, { ReactNode } from "react";
 import { Card } from "./Card";
 
 type CardWrapperProps = {
@@ -13,11 +13,11 @@ export const CardWrapper = ({
   maxRowCount = 6,
   flexType = "flex-row",
   className,
-}: CardWrapperProps): ReactElement => {
+}: CardWrapperProps) => {
   let count = 1;
 
   React.Children.map(children, (child) => {
-    if ((child as ReactElement<any, any>).type === Card) count++;
+    if ((child as any).type === Card) count++;
   });
 
   const hiddens: ReactNode[] = [];

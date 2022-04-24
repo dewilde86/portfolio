@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { Formik, Form, Field } from "formik";
 import { MailBase } from "../MailBase/MailBase";
 import { renderToString } from "react-dom/server";
@@ -48,7 +47,7 @@ const getMailInput = (values: any): any => {
     ],
   };
 };
-export const Contact = (): ReactElement => {
+export const Contact = () => {
   const initialValues: MyFormValues = {
     Name: "",
     Email: "",

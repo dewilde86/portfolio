@@ -1,8 +1,7 @@
-import { ReactElement } from "react";
 import classes from "./My404Page.module.scss";
 import { Link } from "react-router-dom";
 
-export const My404Page = (): ReactElement => {
+export const My404Page = () => {
   return (
     <main className={classes.error_page}>
       <Link to="/">

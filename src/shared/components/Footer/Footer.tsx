@@ -1,9 +1,8 @@
-import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
 const year = new Date().getFullYear();
 
-export const Footer = (props: { borderTop?: boolean }): ReactElement => {
+export const Footer = (props: { borderTop?: boolean }) => {
   const { borderTop } = props;
   return (
     <footer>

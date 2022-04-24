@@ -1,10 +1,9 @@
-import { ReactElement } from "react";
 import TopNavigationbar from "../shared/components/TopNavigationbar/TopNavigationbar";
 import { Footer } from "../shared/components/Footer/Footer";
 import { CardWrapper } from "../shared/components/Card/CardWrapper";
 import { Card } from "../shared/components/Card/Card";
 
-export const Portfolio = (): ReactElement => {
+export const Portfolio = () => {
   return (
     <div className="project-page">
       <header id="header">

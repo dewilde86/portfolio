@@ -1,9 +1,8 @@
-import { ReactElement } from "react";
 import TopNavigationbar from "../shared/components/TopNavigationbar/TopNavigationbar";
 import { Footer } from "../shared/components/Footer/Footer";
 import { getAlgemeneVoorwaardenResources } from "../shared/utils/text-resources";
 
-export const AlgemeneVoorwaarden = (): ReactElement => {
+export const AlgemeneVoorwaarden = () => {
   return (
     <>
       <header>

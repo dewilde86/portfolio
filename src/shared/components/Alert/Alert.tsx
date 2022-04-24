@@ -1,10 +1,8 @@
-import { ReactElement } from "react";
-
 type props = {
   caption: string;
 };
 
-export const AlertMessage = ({ caption }: props): ReactElement => {
+export const AlertMessage = ({ caption }: props) => {
   return (
     <>
       <div

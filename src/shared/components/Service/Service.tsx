@@ -1,9 +1,8 @@
-import { ReactElement } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { getServiceTextResources } from "../../utils/text-resources";
 import { Icons } from "../Icons/Icons";
 
-export const Service = (): ReactElement => {
+export const Service = () => {
   return (
     <>
       <div className="container-fluid">

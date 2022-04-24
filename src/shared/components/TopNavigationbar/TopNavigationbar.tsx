@@ -1,7 +1,7 @@
-import { ReactElement, useState } from "react";
+import { useState } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
-const TopNavigationbar = (): ReactElement => {
+const TopNavigationbar = () => {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);

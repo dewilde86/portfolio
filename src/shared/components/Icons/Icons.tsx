@@ -1,10 +1,8 @@
-import { ReactElement } from "react";
-
 type props = {
   iconType: string;
 };
 
-export const Icons = ({ iconType }: props): ReactElement => {
+export const Icons = ({ iconType }: props) => {
   return (
     <div className="icon-grid">
       <div className="icon-container mb-5">

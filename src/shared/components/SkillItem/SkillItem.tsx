@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-
 type SkillItemProps = {
   skill: string;
   name: string;
@@ -12,7 +10,7 @@ export const SkillItem = ({
   name,
   ratio,
   className,
-}: SkillItemProps): ReactElement => {
+}: SkillItemProps) => {
   return (
     <div className="skill-set-item">
       <div className="skill-set-icon">

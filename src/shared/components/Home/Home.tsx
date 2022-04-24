@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { Aboutme } from "../Aboutme/Aboutme";
 import { Background } from "../Background/Background";
 import { Card } from "../Card/Card";
@@ -12,7 +11,7 @@ import { NavPills } from "../NavPills/NavPills";
 import { ParallaxImage } from "../Background/ParallaxImage";
 import { Service } from "../Service/Service";
 
-const Home = (): ReactElement => {
+const Home = () => {
   return (
     <>
       <div className="App">

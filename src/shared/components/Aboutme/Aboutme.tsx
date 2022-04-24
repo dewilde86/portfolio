@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { SkillItem } from "../SkillItem/SkillItem";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import {
@@ -7,7 +6,7 @@ import {
   getMijnWerkervaringResources,
 } from "../../utils/text-resources";
 
-export const Aboutme = (): ReactElement => {
+export const Aboutme = () => {
   return (
     <>
       <div className="container-fluid">

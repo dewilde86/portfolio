@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-
 const year = new Date().getFullYear();
 
 const tableSettings = {
@@ -25,7 +23,7 @@ export const MailBase = (props: {
   emailadres: string;
   subject: string;
   message: string;
-}): ReactElement => {
+}) => {
   return (
     <>
       <table style={tableSettings}>
