@@ -1,14 +1,16 @@
 import { Formik, Form, Field } from "formik";
-import { MailBase } from "../MailBase/MailBase";
-import { renderToString } from "react-dom/server";
 import { SignupSchema } from "./infra/ContactSchema";
 import { getContactErrorTextResources } from "./infra/contact-resources";
 import { getContactTextResources } from "../../utils/text-resources";
+import { getMailInput } from "./infra/contact-mailInput";
+import { AlertMessage } from "../Alert/Alert";
 
-const baseUrl =
-  "https://allow-cors-private.herokuapp.com/https://api.sendgrid.com/v3/mail/send";
-const apiKey =
-  "Bearer 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";
+const baseUrl: any | Request = process.env.REACT_APP_BASE_URL;
+const apiKey: any | undefined = process.env.REACT_APP_SENDGRID_API_KEY;
+
+function isEmpty(obj: any) {
+  return Object.keys(obj).length === 0 && obj.constructor === Object;
+}
 
 export interface MyFormValues {
   Name: string;
@@ -17,36 +19,6 @@ export interface MyFormValues {
   Message: string;
 }
 
-const getMailInput = (values: any): any => {
-  return {
-    personalizations: [
-      {
-        to: [
-          {
-            email: "ruben@rdewilde.nl",
-          },
-        ],
-        subject: "Contact via contactformulier",
-      },
-    ],
-    from: {
-      email: "no-reply@rdewilde.nl",
-    },
-    content: [
-      {
-        type: "text/html",
-        value: renderToString(
-          <MailBase
-            name={values.Name}
-            emailadres={values.Email}
-            subject={values.Subject}
-            message={values.Message}
-          />
-        ),
-      },
-    ],
-  };
-};
 export const Contact = () => {
   const initialValues: MyFormValues = {
     Name: "",
@@ -76,8 +48,13 @@ export const Contact = () => {
         validateOnMount
         initialValues={initialValues}
         validationSchema={SignupSchema}
-        onSubmit={(values: any, actions: any): void => {
-          fetch(baseUrl, {
+        onSubmit={async (values: any, actions: any) => {
+          actions.setStatus({
+            success: "Sending email...",
+            css: "alert-primary",
+          });
+          actions.setSubmitting(false);
+          const response = await fetch(baseUrl, {
             method: "post",
             headers: {
               Authorization: apiKey,
@@ -85,16 +62,26 @@ export const Contact = () => {
             },
             body: JSON.stringify(getMailInput(values)),
           });
-          actions.setStatus({
-            msg: "De e-mail is verstuurd, ik neem zo spoedig mogelijk contact met je op!",
-          });
-          actions.resetForm();
-          setTimeout(() => {
-            alert(getContactErrorTextResources("EmailSendMessage"));
-          }, 1000);
+          if (response.status === 202) {
+            actions.setStatus({
+              success: getContactErrorTextResources("EmailSuccessMessage"),
+              css: "alert-success",
+            });
+            setTimeout(() => {
+              actions.resetForm();
+            }, 10000);
+          } else {
+            actions.setStatus({
+              success: getContactErrorTextResources("EmailErrorMessage"),
+              css: "alert-danger",
+            });
+            setTimeout(() => {
+              actions.resetForm();
+            }, 10000);
+          }
         }}
       >
-        {({ errors, touched, values }): any => (
+        {({ errors, touched, values, isSubmitting, dirty, status }): any => (
           <Form>
             <div className="form-group form-row mb-3" data-aos="slide-in-right">
               <div className="col-12">
@@ -200,16 +187,22 @@ export const Contact = () => {
               <button
                 type="submit"
                 className="btn btn-primary-color"
-                disabled={
-                  !values.Name &&
-                  !values.Email &&
-                  !values.Subject &&
-                  !values.Message
-                }
+                disabled={isSubmitting || !isEmpty(errors) || !dirty}
               >
                 Verzenden
               </button>
             </div>
+
+            {status ? (
+              <div className="mt-3" data-aos="fade-up">
+                <AlertMessage
+                  alertType={status ? status.css : ""}
+                  caption={status ? status.success : ""}
+                ></AlertMessage>
+              </div>
+            ) : (
+              ""
+            )}
           </Form>
         )}
       </Formik>

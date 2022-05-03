@@ -1,0 +1,24 @@
+/*-----------------------------------------
+            Alert
+------------------------------------------*/
+
+.alert {
+  &-primary {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-color: lighten($primary-color, 20%);
+  }
+
+  &-success {
+    color: var(--succes-green);
+    border-color: var(--succes-green);
+  }
+
+  &-danger {
+    color: var(--validation-red-text);
+    background-color: var(--validation-bg-red);
+  }
+  p {
+    margin-bottom: 0;
+  }
+}

@@ -202,6 +202,7 @@ a {
 
   @include breakpoint(dark) {
     background: url("#{$images}Rdw-Logo-White.svg") center center no-repeat;
+    filter: none !important;
   }
 }
 

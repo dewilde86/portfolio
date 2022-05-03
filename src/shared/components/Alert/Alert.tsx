@@ -1,23 +1,31 @@
+import { useState } from "react";
+
 type props = {
+  alertType: string;
   caption: string;
 };
 
-export const AlertMessage = ({ caption }: props) => {
+export const AlertMessage = ({ alertType, caption }: props) => {
+  const [showAlert, setShowAlert] = useState(true);
+
   return (
     <>
       <div
-        className="alert alert-success alert-dismissible fade show"
+        className={[
+          `alert`,
+          alertType,
+          `alert-dismissible fade`,
+          showAlert ? "show" : "",
+        ].join(" ")}
         role="alert"
       >
         <p>{caption}</p>
         <button
-          type="button"
-          className="close"
+          className="btn-close"
           data-dismiss="alert"
           aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
+          onClick={() => setShowAlert(false)}
+        ></button>
       </div>
     </>
   );

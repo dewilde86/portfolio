@@ -1,12 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { getCookieNotificationTextResources } from "./shared/utils/text-resources";
+import CookieConsent from "react-cookie-consent";
 
 import { AlgemeneVoorwaarden } from "./AlgemeneVoorwaarden/AlgemeneVoorwaarden";
 import { Armalux } from "./Portfolio/Armalux";
 import { DJSchoolGouda } from "./Portfolio/DJSchoolGouda";
 import { FlexAlarm } from "./Portfolio/FlexAlarm";
+import Home from "./shared/components/Home/Home";
 import { IswWebsite } from "./Portfolio/IswWebsite";
 import { KokSchilderwerken } from "./Portfolio/KokSchilderwerken";
 import { Montblanc } from "./Portfolio/Montblanc";
+import { My404Page } from "./shared/components/My404Page/My404Page";
 import { OraCoaching } from "./Portfolio/OraCoaching";
 import { OudebegraafsplaatsGouda } from "./Portfolio/OudebegraafplaatsGouda";
 import { Portfolio } from "./Portfolio/Portfolio";
@@ -19,16 +23,11 @@ import { Supergroup } from "./Portfolio/Supergroup";
 import { Supertech } from "./Portfolio/Supertech";
 import { Validat } from "./Portfolio/Validat";
 
-import Home from "./shared/components/Home/Home";
-import { My404Page } from "./shared/components/My404Page/My404Page";
-
 import smoothscroll from "smoothscroll-polyfill";
 import AOS from "aos";
 
 import "./styles/style.scss";
 import "aos/dist/aos.css";
-import { getCookieNotificationTextResources } from "./shared/utils/text-resources";
-import CookieConsent from "react-cookie-consent";
 
 smoothscroll.polyfill();
 
