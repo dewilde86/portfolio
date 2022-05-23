@@ -278,20 +278,21 @@ a {
   &-caption {
     position: absolute;
 
+    .highlight {
+      font-family: var(--name-font);
+      color: var(--primary-color);
+      font-size: rem(46px);
+
+      @include breakpoint(handhelds) {
+        font-size: rem(20px);
+      }
+    }
+
     h1 {
       font-size: rem(35px);
-      text-shadow: rem(1px) rem(1px) var(--box-schadow-cards);
 
       @include breakpoint(handhelds) {
         font-size: rem(15px);
-      }
-
-      .highlight {
-        font-size: rem(46px);
-
-        @include breakpoint(handhelds) {
-          font-size: rem(20px);
-        }
       }
     }
 

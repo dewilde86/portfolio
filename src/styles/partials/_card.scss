@@ -25,6 +25,8 @@
     transform-style: preserve-3d;
 
     img {
+      width: 100%;
+      aspect-ratio: 1/1;
       @include transition(transform 0.4s);
     }
 

@@ -2,6 +2,9 @@
             Mixins 
 ---------------------------------- */
 
+@use "sass:list";
+@use "sass:math";
+
 /* Keyframes Mixin */
 
 @mixin keyframes($animation-name) {
@@ -78,15 +81,6 @@
   display: inline-block;
 }
 
-/* Aspect Ratio Mixin */
-
-@mixin aspect-ratio($ratio: 2) {
-  $gap: 100 / $ratio;
-  width: 100%;
-  height: 0;
-  padding-bottom: #{$gap + "%"};
-}
-
 /* Object fit Mixin */
 
 @mixin object-fit($fit: fill, $position: null) {
@@ -104,10 +98,10 @@
 /* Make REM from PX */
 
 @function stripUnit($value) {
-  @return $value / ($value * 0 + 1);
+  @return math.div($value, $value * 0 + 1);
 }
 @function rem($pxValue) {
-  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+  @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
 }
 
 /* Media Queries Mixin */
