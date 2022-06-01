@@ -5,6 +5,7 @@ import {
   getSkilsTextResources,
   getMijnWerkervaringResources,
 } from "../../utils/text-resources";
+import { skillItems } from "../../utils/data/data";
 
 export const Aboutme = () => {
   return (
@@ -62,69 +63,26 @@ export const Aboutme = () => {
             </section>
           </div>
           <div className="col-12 col-md-6">
-            <SkillItem
-              skill="HTML"
-              className="p90"
-              ratio={90}
-              name="HTML5/CSS3"
-            />
-            <SkillItem
-              skill="Sass-Less"
-              className="p90"
-              ratio={90}
-              name="Sass/Less"
-            />
-            <SkillItem
-              skill="Javascript"
-              className="p60"
-              ratio={60}
-              name="Javascript"
-            />
-            <SkillItem
-              skill="jQuery"
-              className="p60"
-              ratio={60}
-              name="jQuery"
-            />
-            <SkillItem skill="React" className="p70" ratio={70} name="React" />
-            <SkillItem
-              skill="Angular"
-              className="p50"
-              ratio={50}
-              name="Angular"
-            />
+            {skillItems.slice(0, 5).map((item, index) => (
+              <SkillItem
+                skill={item.skill}
+                className={item.class}
+                ratio={item.ratio}
+                name={item.name}
+                key={index}
+              />
+            ))}
           </div>
           <div className="col-12 col-md-6">
-            <SkillItem
-              skill="Git-versiebeheer"
-              className="p70"
-              ratio={70}
-              name="Git"
-            />
-            <SkillItem
-              skill="Photoshop"
-              className="p70"
-              ratio={70}
-              name="Photoshop"
-            />
-            <SkillItem
-              skill="Illustrator"
-              className="p80"
-              ratio={80}
-              name="Illustrator"
-            />
-            <SkillItem
-              skill="Indesign"
-              className="p70"
-              ratio={70}
-              name="Indesign"
-            />
-            <SkillItem
-              skill="Adobe-XD"
-              className="p70"
-              ratio={70}
-              name="Adobe XD"
-            />
+            {skillItems.slice(5, 10).map((item, index) => (
+              <SkillItem
+                skill={item.skill}
+                className={item.class}
+                ratio={item.ratio}
+                name={item.name}
+                key={index}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -18,8 +18,8 @@ export const Card = (props: {
   } = props;
   return (
     <div className={"p-1 " + className}>
-      <div className="card aspect-ratio aspect-ratio-1/1" data-aos="zoom-in">
-        <figure className="aspect-ratio-item">
+      <div className="card" data-aos="zoom-in">
+        <figure>
           <img
             src={`/images/portfolio/` + imageSrc + `.png`}
             alt={imageAlt}

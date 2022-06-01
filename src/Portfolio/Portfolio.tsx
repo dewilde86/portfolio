@@ -2,6 +2,7 @@ import TopNavigationbar from "../shared/components/TopNavigationbar/TopNavigatio
 import { Footer } from "../shared/components/Footer/Footer";
 import { CardWrapper } from "../shared/components/Card/CardWrapper";
 import { Card } from "../shared/components/Card/Card";
+import { portfolioItems } from "../shared/utils/data/data";
 
 export const Portfolio = () => {
   return (
@@ -21,96 +22,15 @@ export const Portfolio = () => {
           </div>
           <div className="row">
             <CardWrapper maxRowCount={17}>
-              <Card
-                imageSrc="Superfuif"
-                imageAlt="Superfuif Website"
-                link="Superfuif"
-                customerName="Superfuif"
-              />
-              <Card
-                imageSrc="Flexalarm"
-                imageAlt="Flexalarm Website"
-                link="Flexalarm"
-                customerName="FlexAlarm"
-              />
-              <Card
-                imageSrc="Supergroup"
-                imageAlt="Supergroup Website"
-                link="Supergroup"
-                customerName="Supergroup"
-              />
-              <Card
-                imageSrc="DJSchoolGouda"
-                imageAlt="DJSchoolGouda Website"
-                link="DJSchoolGouda"
-                customerName="DJ School Gouda"
-              />
-              <Card
-                imageSrc="Softvalue"
-                imageAlt="Softvalue Website"
-                link="Softvalue"
-                customerName="Softvalue"
-              />
-              <Card
-                imageSrc="Armalux"
-                imageAlt="Armalux Website"
-                link="Armalux"
-                customerName="Armalux"
-              />
-              <Card
-                imageSrc="KokSchilderwerken"
-                imageAlt="KokSchilderwerken Website"
-                link="KokSchilderwerken"
-                customerName="Kok Schilderwerken"
-              />
-              <Card
-                imageSrc="Supertech"
-                imageAlt="Supertech Website"
-                link="Supertech"
-                customerName="Supertech"
-              />
-              <Card
-                imageSrc="Validat"
-                imageAlt="Validat Website"
-                link="Validat"
-                customerName="Validat"
-              />
-              <Card
-                imageSrc="StrongerBodyStrongerMind"
-                imageAlt="Stronger Body Stronger Mind Website"
-                link="StrongerBodyStrongerMind"
-                customerName="Stronger Body Stronger Mind"
-              />
-              <Card
-                imageSrc="OraCoaching"
-                imageAlt="Ora Coaching Website"
-                link="Oracoaching"
-                customerName="Ora coaching"
-              />
-              <Card
-                imageSrc="Intersoftware-website"
-                imageAlt="Intersoftware Website"
-                link="Intersoftware-website"
-                customerName="Intersoftware website"
-              />
-              <Card
-                imageSrc="Starterstool-website"
-                imageAlt="Intersoftware Startertool"
-                link="Intersoftware-rekentools"
-                customerName="Intersoftware rekentools"
-              />
-              <Card
-                imageSrc="Obg"
-                imageAlt="Oudebegraafplaats"
-                link="OudebegraafplaatsGouda"
-                customerName="Stichting Oudebegraafplaats Gouda"
-              />
-              <Card
-                imageSrc="Montblanc"
-                imageAlt="Montblanc intranet"
-                link="Montblanc"
-                customerName="Montblanc"
-              />
+              {portfolioItems.map((item, index) => (
+                <Card
+                  imageSrc={item.image}
+                  imageAlt={item.alt}
+                  link={item.link}
+                  customerName={item.name}
+                  key={index}
+                />
+              ))}
             </CardWrapper>
           </div>
         </div>

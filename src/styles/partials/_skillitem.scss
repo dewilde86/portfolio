@@ -17,6 +17,7 @@
       }
     }
   }
+
   &-icon {
     width: 10.5%;
     align-self: center;
@@ -44,11 +45,13 @@
   &-detail {
     width: 85.5%;
   }
+
   &-meta {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.8rem;
   }
+
   &-name {
     display: flex;
     align-items: flex-end;
@@ -67,8 +70,11 @@
       color: var(--white);
     }
   }
+
   &-high {
     color: var(--primary-color);
+    z-index: 999;
+
     @include breakpoint(dark) {
       color: var(--white);
     }
@@ -133,6 +139,7 @@
         }
       }
     }
+
     &.p80 {
       &:after {
         background-image: -webkit-gradient(
@@ -169,6 +176,7 @@
         }
       }
     }
+
     &.p70 {
       &:after {
         background-image: -webkit-gradient(
@@ -205,6 +213,7 @@
         }
       }
     }
+
     &.p60 {
       &:after {
         background-image: -webkit-gradient(
@@ -241,6 +250,7 @@
         }
       }
     }
+
     &.p50 {
       &:after {
         background-image: -webkit-gradient(
@@ -273,6 +283,7 @@
         }
       }
     }
+
     &.p40 {
       &:after {
         background-image: -webkit-gradient(

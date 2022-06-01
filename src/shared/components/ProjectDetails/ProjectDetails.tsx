@@ -71,16 +71,14 @@ export const ProjectDetails = (props: {
         </div>
       </div>
       <div className="container-fluid">
-        <div className="row">
-          <div className="aspect-ratio aspect-ratio-16/9">
-            <figure className="project-img aspect-ratio-item">
-              <img
-                src={`/images/projects/` + ProjectImage + `_1.png`}
-                alt={ProjectImage + `_1`}
-                data-aos="zoom-in"
-              />
-            </figure>
-          </div>
+        <div className="project-img-container">
+          <figure className="project-img">
+            <img
+              src={`/images/projects/` + ProjectImage + `_1.png`}
+              alt={ProjectImage + `_1`}
+              data-aos="zoom-in"
+            />
+          </figure>
         </div>
       </div>
       <div className="container">
@@ -135,40 +133,38 @@ export const ProjectDetails = (props: {
         </div>
       </div>
       <div className="container-fluid">
-        <div className="project-footer">
-          <div className="aspect-ratio aspect-ratio-16/9">
-            <figure className="project-img aspect-ratio-item">
-              <img
-                src={`/images/projects/` + ProjectImage + `_3.png`}
-                alt={ProjectImage + `_3`}
-                data-aos="zoom-in"
-              />
-              <figcaption>
-                <a
-                  href={PrevProject}
-                  title={PrevProject}
-                  className="prev-project"
-                  data-aos="slide-in-left"
-                >
-                  <span className="arrow" />
-                  <span className="text">prev project</span>
-                </a>
-                <h3 data-aos="flip-in-y">Work</h3>
-                <a
-                  href={NextProject}
-                  title={NextProject}
-                  className="next-project"
-                  data-aos="slide-in-right"
-                >
-                  <span className="text">next project</span>
-                  <span className="arrow">
-                    <span className="arrow-tip"></span>
-                    <span className="arrow-length"></span>
-                  </span>
-                </a>
-              </figcaption>
-            </figure>
-          </div>
+        <div className="project-img-container">
+          <figure className="project-img">
+            <img
+              src={`/images/projects/` + ProjectImage + `_3.png`}
+              alt={ProjectImage + `_3`}
+              data-aos="zoom-in"
+            />
+            <figcaption>
+              <a
+                href={PrevProject}
+                title={PrevProject}
+                className="prev-project"
+                data-aos="slide-in-left"
+              >
+                <span className="arrow" />
+                <span className="text">prev project</span>
+              </a>
+              <h3 data-aos="flip-in-y">Work</h3>
+              <a
+                href={NextProject}
+                title={NextProject}
+                className="next-project"
+                data-aos="slide-in-right"
+              >
+                <span className="text">next project</span>
+                <span className="arrow">
+                  <span className="arrow-tip"></span>
+                  <span className="arrow-length"></span>
+                </span>
+              </a>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </>

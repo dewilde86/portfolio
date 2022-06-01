@@ -10,6 +10,7 @@ import { NavHashLink as NavLink } from "react-router-hash-link";
 import { NavPills } from "../NavPills/NavPills";
 import { ParallaxImage } from "../Background/ParallaxImage";
 import { Service } from "../Service/Service";
+import { portfolioItems } from "../../utils/data/data";
 
 const Home = () => {
   return (
@@ -20,8 +21,8 @@ const Home = () => {
           <Background imgUrl="Header">
             <div className="background-caption">
               <section className="flex">
-                <h1 data-aos="slide-in-left">
-                  <span className="highlight">Ruben de Wilde</span>
+                <h1 className="highlight" data-aos="slide-in-left">
+                  Ruben de Wilde
                 </h1>
                 <h1 data-aos="flip-in-y">Front-end Developer</h1>
                 <NavLink
@@ -64,55 +65,16 @@ const Home = () => {
                 </div>
               </div>
               <div className="row">
-                <CardWrapper maxRowCount={10}>
-                  <Card
-                    imageSrc="Superfuif"
-                    imageAlt="Superfuif Website"
-                    link="Superfuif"
-                    customerName="Superfuif"
-                  />
-                  <Card
-                    imageSrc="Flexalarm"
-                    imageAlt="Flexalarm Website"
-                    link="Flexalarm"
-                    customerName="FlexAlarm"
-                  />
-                  <Card
-                    imageSrc="Supergroup"
-                    imageAlt="Supergroup Website"
-                    link="Supergroup"
-                    customerName="Supergroup"
-                  />
-                  <Card
-                    imageSrc="DJSchoolGouda"
-                    imageAlt="DJSchoolGouda Website"
-                    link="DJSchoolGouda"
-                    customerName="DJ School Gouda"
-                  />
-                  <Card
-                    imageSrc="Softvalue"
-                    imageAlt="Softvalue Website"
-                    link="Softvalue"
-                    customerName="Softvalue"
-                  />
-                  <Card
-                    imageSrc="Armalux"
-                    imageAlt="Armalux Website"
-                    link="Armalux"
-                    customerName="Armalux"
-                  />
-                  <Card
-                    imageSrc="KokSchilderwerken"
-                    imageAlt="KokSchilderwerken Website"
-                    link="KokSchilderwerken"
-                    customerName="Kok Schilderwerken"
-                  />
-                  <Card
-                    imageSrc="Supertech"
-                    imageAlt="Supertech Website"
-                    link="Supertech"
-                    customerName="Supertech"
-                  />
+                <CardWrapper maxRowCount={16}>
+                  {portfolioItems.slice(0, 8).map((item, index) => (
+                    <Card
+                      imageSrc={item.image}
+                      imageAlt={item.alt}
+                      link={item.link}
+                      customerName={item.name}
+                      key={index}
+                    />
+                  ))}
                 </CardWrapper>
                 <div className="button-wrapper justify-content-end">
                   <Link

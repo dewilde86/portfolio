@@ -4,6 +4,7 @@ import { getContactErrorTextResources } from "./infra/contact-resources";
 import { getContactTextResources } from "../../utils/text-resources";
 import { getMailInput } from "./infra/contact-mailInput";
 import { AlertMessage } from "../Alert/Alert";
+import { IMyFormValues } from "./infra/contact-model";
 
 const baseUrl: any | Request = process.env.REACT_APP_BASE_URL;
 const apiKey: any | undefined = process.env.REACT_APP_SENDGRID_API_KEY;
@@ -12,15 +13,8 @@ function isEmpty(obj: any) {
   return Object.keys(obj).length === 0 && obj.constructor === Object;
 }
 
-export interface MyFormValues {
-  Name: string;
-  Email: string;
-  Subject: string;
-  Message: string;
-}
-
 export const Contact = () => {
-  const initialValues: MyFormValues = {
+  const initialValues: IMyFormValues = {
     Name: "",
     Email: "",
     Subject: "",

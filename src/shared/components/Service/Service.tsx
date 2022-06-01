@@ -1,4 +1,5 @@
 import { NavHashLink as NavLink } from "react-router-hash-link";
+import { iconsItems } from "../../utils/data/data";
 import { getServiceTextResources } from "../../utils/text-resources";
 import { Icons } from "../Icons/Icons";
 
@@ -91,12 +92,9 @@ export const Service = () => {
       </div>
       <div className="container">
         <div className="row">
-          <Icons iconType="Ontwerpen" />
-          <Icons iconType="Ontwikkelen" />
-          <Icons iconType="Logo's" />
-          <Icons iconType="Illustraties" />
-          <Icons iconType="DTP" />
-          <Icons iconType="Huisstijl" />
+          {iconsItems.map((item, index) => (
+            <Icons iconType={item.type} key={index} />
+          ))}
         </div>
       </div>
     </>
