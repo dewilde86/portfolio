@@ -119,7 +119,7 @@
     border: rem(1px) solid var(--white);
 
     @include breakpoint(handhelds) {
-      padding: rem(0.5);
+      padding: rem(5px) rem(7.5px);
     }
 
     &:disabled,
