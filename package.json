@@ -19,7 +19,6 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",
-    "react-scripts": "^5.0.1",
     "react-scrollspy": "^3.4.3",
     "sass": "^1.52.1",
     "smoothscroll-polyfill": "^0.4.4",
@@ -52,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "react-scripts": "^5.0.1",
     "@types/aos": "^3.0.4",
     "@types/react-router-hash-link": "^2.4.5",
     "@types/react-scrollspy": "^3.3.5",
