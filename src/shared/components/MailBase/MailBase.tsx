@@ -5,6 +5,12 @@ const tableSettings = {
   margin: "0 auto",
 };
 
+const tdStyle = {
+  padding: "30px 69px 30px 69px",
+  border: "1px solid #8d736c",
+  backgroundColor: "#FFFFFF",
+};
+
 const headerStyle = {
   font: "Roboto",
   fontSize: "20px",
@@ -29,13 +35,7 @@ export const MailBase = (props: {
       <table style={tableSettings}>
         <tbody>
           <tr>
-            <td
-              style={{
-                padding: "30px 69px 30px 69px",
-                border: "1px solid #8d736c",
-                backgroundColor: "#FFFFFF",
-              }}
-            >
+            <td style={tdStyle}>
               <table style={{ width: "100%" }}>
                 <tbody>
                   <tr>

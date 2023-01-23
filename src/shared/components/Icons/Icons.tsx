@@ -1,6 +1,6 @@
-type props = {
+interface props {
   iconType: string;
-};
+}
 
 export const Icons = ({ iconType }: props) => {
   return (

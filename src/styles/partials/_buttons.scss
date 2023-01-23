@@ -154,6 +154,19 @@
       background: var(--primary-color);
       color: var(--white);
     }
+
+    &.active {
+      color: var(--white);
+      border-color: var(--primary-color);
+
+      &:focus,
+      &:hover,
+      &:active {
+        border: rem(1px) solid var(--primary-color);
+        background: var(--primary-color);
+        color: var(--white);
+      }
+    }
   }
 
   &-readmore {

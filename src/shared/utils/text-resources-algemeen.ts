@@ -17,7 +17,7 @@ export function getGeneralTextResources(
   return resources[id];
 }
 
-export function createGetTextResources<T>(
+export function createGetTextResources<T extends object>(
   resources: T
 ): (id: keyof T | keyof GeneralTextResources) => string {
   return function getTextResources(
