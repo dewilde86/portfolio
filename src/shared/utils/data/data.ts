@@ -106,15 +106,21 @@ export const skillItems = [
   },
   {
     skill: "Javascript",
-    class: "p60",
-    ratio: 60,
+    class: "p70",
+    ratio: 70,
     name: "Javascript",
   },
   {
-    skill: "jQuery",
+    skill: "Typescript",
     class: "p60",
     ratio: 60,
-    name: "jQuery",
+    name: "Typescript",
+  },
+  {
+    skill: "Angular",
+    class: "p60",
+    ratio: 60,
+    name: "Angular",
   },
   {
     skill: "React",
