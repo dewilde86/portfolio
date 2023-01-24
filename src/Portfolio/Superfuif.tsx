@@ -18,7 +18,7 @@ export const Superfuif = () => {
           Products={getPortfolioTextResources("Products")}
           Role={getGeneralTextResources("InterfaceAnddevelopment")}
           ProjectImage="Superfuif"
-          FullWebsiteImageHeight={2257}
+          FullWebsiteImageHeight={1899}
           Tools={getPortfolioTextResources("SuperfuifUsedTools")}
           Url={getPortfolioTextResources("SuperfuifUrl")}
           Description={getPortfolioTextResources("SuperfuifDescription")}
