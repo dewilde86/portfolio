@@ -292,22 +292,22 @@
           left top,
           right top,
           from(var(--black-700)),
-          color-stop(65%, var(--primary-color-lighter))
+          color-stop(55%, var(--primary-color-lighter))
         );
         background-image: -webkit-linear-gradient(
           left,
           var(--black-700),
-          var(--primary-color-lighter) 65%
+          var(--primary-color-lighter) 55%
         );
         background-image: -o-linear-gradient(
           left,
           var(--black-700),
-          var(--primary-color-lighter) 65%
+          var(--primary-color-lighter) 55%
         );
         background-image: linear-gradient(
           to right,
           var(--black-700),
-          var(--primary-color-lighter) 65%
+          var(--primary-color-lighter) 55%
         );
       }
 

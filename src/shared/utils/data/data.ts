@@ -106,8 +106,8 @@ export const skillItems = [
   },
   {
     skill: "Javascript",
-    class: "p70",
-    ratio: 70,
+    class: "p60",
+    ratio: 60,
     name: "Javascript",
   },
   {
